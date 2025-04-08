@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Furniture webshop</string>
+    <string name="bejelentkezés">Bejelentkezés</string>
+    <string name="regisztráció">Regisztráció</string>
+    <string name="profil">Profil</string>
+    <string name="kijelentkezés">Kijelentkezés</string>
+    <string name="email">Email</string>
+    <string name="jelszo">Jelszó</string>
+    <string name="jelszo_megerositese">Jelszó megerősítése</string>
+    <string name="regisztracio">Regisztráció</string>
+    <string name="register_text">Már van fiókod? Jelentkezz be</string>
+    <string name="bejelentkezesi_link">Bejelentkezési link</string>
+    <string name="login_email">Email</string>
+    <string name="login_email_mezo">Email mező</string>
+    <string name="login_jelszo">Jelszó</string>
+    <string name="login_jelszo_mezo">Jelszó mező</string>
+    <string name="bejelentkezes">Bejelentkezés</string>
+    <string name="bejelentkezes_gomb">Bejelentkezés gomb</string>
+    <string name="login_text">Még nincs fiókod? Regisztrálj itt!</string>
+    <string name="regisztracios_link">Regisztrációs link</string>
 </resources>
