@@ -2,13 +2,14 @@ package com.example.furniturewebshop;
 
 import android.os.Bundle;
 
-public class MainActivity extends BaseActivity {
+public class LoginActivity extends BaseActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new MainFragment())
+                    .replace(R.id.content_frame, new LoginFragment())
                     .commit();
         }
     }
