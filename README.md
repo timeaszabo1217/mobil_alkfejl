@@ -3,11 +3,11 @@
 Jelen projektben egy Android alapú bútor webshop alkalmazás fejlesztése volt a feladat.
 
 ## Feladat szöveges leírása
-A projekt célja egy Android alapú bútor webshop fejlesztése, amely lehetővé teszi a felhasználók számára a bútorok böngészését, kosárba helyezését és megrendelését. Az alkalmazás tartalmazza a termékek listáját, részletes termékadatokat, felhasználói értékeléseket és keresési lehetőséget. A felhasználók regisztrálhatnak és bejelentkezhetnek. Az adminisztrátorok kezelhetik a termékeket és rendeléseket. Az alkalmazás fejlesztéséhez Android Studio és Firebase technológiákat alkalmazunk az autentikáció, adatkezelés és szinkronizálás biztosítására.
+A projekt célja egy Android alapú bútor webshop fejlesztése, amely lehetővé teszi a felhasználók számára a bútorok böngészését, kosárba helyezését és megrendelését. Az alkalmazás tartalmazza a termékek listáját, részletes termékadatokat, felhasználói értékeléseket és keresési lehetőséget. A felhasználók regisztrálhatnak és bejelentkezhetnek. Az adminisztrátorok kezelhetik a termékeket és rendeléseket. Az alkalmazás fejlesztéséhez Android Studio és Firebase technológiákat alkalmaztam az autentikáció, adatkezelés és szinkronizálás biztosítására.
 
 ## Követelmények
 
-### Regisztráció, Bejelentkezés, Kijelentkezés
+### Regisztráció, Bejelentkezés, Profil, Kijelentkezés
 
 - **Regisztráció**
   - Új felhasználók e-mail és jelszó megadásával regisztrálhatnak (Firebase Authentication).
@@ -18,8 +18,13 @@ A projekt célja egy Android alapú bútor webshop fejlesztése, amely lehetőv�
   - Sikeres bejelentkezés után főoldalra navigálás (`Intent`).
   - Értesítés megjelenítése (Firebase Cloud Messaging).
 
+- **Profil**
+  - A bejelentkezett felhasználó alapvető adatainak megjelenítése (név, email).
+  - Jelszó módosítása (Firebase Authentication).
+  - Fiók törlése (Firebase Authentication).
+
 - **Kijelentkezés**
-  - A bejelentkezett felhasználó bármikor kijelentkezhet az alkalmazásból.
+  - A bejelentkezett felhasználó bármikor kijelentkezhet az alkalmazásból (Firebase Authentication).
 
 ### Főoldal (Terméklista oldal)
 
