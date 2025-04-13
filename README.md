@@ -82,5 +82,5 @@ A projekt célja egy Android alapú bútor webshop fejlesztése, amely lehetőv�
 - Kétféle layout: `ConstraintLayout` + `ScrollView` vagy `LinearLayout`.
 - Reszponzív dizájn, képernyőforgatás utáni korrekt megjelenés.
 - Legalább 2 animáció:
-  - Kosárba helyezés (átrepülő termék ikon)
-  - Listaelemek animációja (`fade-in`, `slide-up`)
+  - Betöltési képernyő (`fade-in`)
+  - Oldalak közti navigálás (`slide-in`, `slide-out`)
