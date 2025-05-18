@@ -69,12 +69,15 @@ public class BaseActivity extends AppCompatActivity {
             if (itemId == R.id.menu_furniture) {
                 startActivity(new Intent(this, FurnitureActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                return true;
             } else if (itemId == R.id.menu_home_decor) {
                 startActivity(new Intent(this, HomeDecorActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                return true;
             } else if (itemId == R.id.menu_garden) {
                 startActivity(new Intent(this, GardenActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                return true;
             }
             return false;
         });
@@ -88,9 +91,14 @@ public class BaseActivity extends AppCompatActivity {
 
         if (user != null) {
             popupMenu.getMenuInflater().inflate(R.menu.profile_menu_user, popupMenu.getMenu());
+
+            if (!AdminManager.isAdmin(user.getUid())) {
+                popupMenu.getMenu().removeItem(R.id.menu_admin);
+            }
         } else {
             popupMenu.getMenuInflater().inflate(R.menu.profile_menu_guest, popupMenu.getMenu());
         }
+
 
         popupMenu.setOnMenuItemClickListener(item -> {
             int itemId = item.getItemId();
@@ -111,6 +119,10 @@ public class BaseActivity extends AppCompatActivity {
                 startActivity(new Intent(this, MainActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
+                return true;
+            } else if (itemId == R.id.menu_admin) {
+                startActivity(new Intent(this, AdminActivity.class));
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 return true;
             }
             return false;
