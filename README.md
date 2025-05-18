@@ -29,49 +29,13 @@ A projekt célja egy Android alapú bútor webshop fejlesztése, amely lehetőv�
 ### Főoldal (Terméklista oldal)
 
 - Bútorok listázása valós időben.
-- Keresés név és kategória alapján.
-- Szűrés anyag, méret és ár szerint.
 - Komplex Firestore lekérdezések (`where`, `orderBy`, `startAt`, `limit`).
-- Termék kiválasztása részletes megtekintésre.
 - Animáció alkalmazása (pl. lista betöltése, oldalváltás).
-
-### Termék adatlap
-
-- Termékinformációk megjelenítése: név, ár, jellemzők, készlet.
-- Termékképek böngészése.
-- Vásárlói értékelések megjelenítése.
-- "Kosárba" gomb animációval.
-- Reszponzív megjelenés különböző kijelzőméreteken.
-
-### Kosár
-
-- Kosár tartalmának megjelenítése és szerkesztése.
-- Termék mennyiségének módosítása, törlés.
-- Összesített ár és darabszám kalkulálása.
-
-- **Megrendelés véglegesítése**
-  - Vendégként: kötelező adatok megadása (név, email, telefon, cím).
-  - Regisztráltként: mentett adatok automatikus betöltése vagy új mentése.
-
-- Rendelés mentése Firestore-ba külön szálon (`coroutine` vagy `AsyncTask`).
-
-### Rendeléseim (Felhasználói oldal)
-
-- Korábbi rendelések listázása.
-- Rendelés státuszának megjelenítése.
-- Firestore lekérdezés `whereEqualTo`-val felhasználói azonosítóra.
-- Lista frissítése pl. `onResume` használatával.
 
 ### Admin oldal
 
 - **Termékek kezelése (CRUD)**
   - Termékek hozzáadása, módosítása, törlése.
-
-- **Rendelések kezelése**
-  - Rendelések megtekintése.
-  - Státusz módosítása.
-  
-- Adatkezelés külön szálon.
 
 ### Értesítések és jogosultságok
 
@@ -84,7 +48,7 @@ A projekt célja egy Android alapú bútor webshop fejlesztése, amely lehetőv�
 ### Navigáció, Layout és Animációk
 
 - Navigáció `Intent` segítségével.
-- Kétféle layout: `ConstraintLayout` + `ScrollView` vagy `LinearLayout`.
+- Legalább kétféle layout: `ConstraintLayout` + `ScrollView` vagy `LinearLayout`.
 - Reszponzív dizájn, képernyőforgatás utáni korrekt megjelenés.
 - Legalább 2 animáció:
   - Betöltési képernyő (`fade-in`)
