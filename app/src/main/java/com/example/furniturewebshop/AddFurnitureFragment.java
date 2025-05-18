@@ -169,10 +169,7 @@ public class AddFurnitureFragment extends Fragment {
                 .add(item)
                 .addOnSuccessListener(documentReference -> {
                     Toast.makeText(getContext(), "Sikeres mentés!", Toast.LENGTH_SHORT).show();
-                    requireActivity().getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.fragment_container, new AdminFragment())
-                            .commit();
+                    requireActivity().getSupportFragmentManager().popBackStack();
                 })
                 .addOnFailureListener(e ->
                         Toast.makeText(getContext(), "Hiba adatbázis mentéskor: " + e.getMessage(), Toast.LENGTH_SHORT).show());
