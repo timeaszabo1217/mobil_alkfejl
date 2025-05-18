@@ -20,8 +20,8 @@
             android:padding="12dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.85" />
+            app:layout_constraintEnd_toStartOf="@+id/priceEditText"
+            app:layout_constraintWidth_percent="0.3" />
 
         <EditText
             android:id="@+id/priceEditText"
@@ -32,11 +32,12 @@
             android:importantForAccessibility="yes"
             android:importantForAutofill="no"
             android:padding="12dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@id/nameEditText"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.85" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nameEditText"
+            app:layout_constraintEnd_toStartOf="@+id/categoryEditText"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintWidth_percent="0.3" />
 
         <EditText
             android:id="@+id/categoryEditText"
@@ -47,11 +48,10 @@
             android:importantForAccessibility="yes"
             android:importantForAutofill="no"
             android:padding="12dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintTop_toBottomOf="@id/priceEditText"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/priceEditText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.85" />
+            app:layout_constraintWidth_percent="0.3" />
 
         <Button
             android:id="@+id/selectImageButton"
@@ -60,10 +60,11 @@
             android:text="Kép kiválasztása"
             android:contentDescription="Kép kiválasztása gomb"
             android:importantForAccessibility="yes"
-            android:padding="12dp"
+            android:padding="16dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/colorAccent"
-            app:layout_constraintTop_toBottomOf="@id/categoryEditText"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/nameEditText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -78,23 +79,22 @@
             app:layout_constraintTop_toBottomOf="@id/selectImageButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintWidth_percent="0.1"
             app:layout_constraintDimensionRatio="1:1" />
 
         <Button
-            android:id="@+id/saveButton"
-            android:layout_width="0dp"
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hozzáadás"
-            android:padding="14dp"
-            android:layout_marginTop="20dp"
+            android:text="Módosítás"
+            android:padding="16dp"
             android:backgroundTint="@color/colorAccent"
-            android:contentDescription="Hozzáadás gomb"
+            android:contentDescription="Módosítás gomb"
             android:importantForAccessibility="yes"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/selectedImageView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.85" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
