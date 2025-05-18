@@ -115,4 +115,16 @@ public class AdminFragment extends Fragment {
         super.onResume();
         loadItems();
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        getParentFragmentManager().setFragmentResultListener("refreshRequest", this, (requestKey, bundle) -> {
+            boolean refresh = bundle.getBoolean("refresh", false);
+            if (refresh) {
+                loadItems();
+            }
+        });
+    }
 }

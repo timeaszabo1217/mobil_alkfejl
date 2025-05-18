@@ -169,6 +169,9 @@ public class AddFurnitureFragment extends Fragment {
                 .add(item)
                 .addOnSuccessListener(documentReference -> {
                     Toast.makeText(getContext(), "Sikeres mentés!", Toast.LENGTH_SHORT).show();
+                    Bundle result = new Bundle();
+                    result.putBoolean("refresh", true);
+                    getParentFragmentManager().setFragmentResult("refreshRequest", result);
                     requireActivity().getSupportFragmentManager().popBackStack();
                 })
                 .addOnFailureListener(e ->

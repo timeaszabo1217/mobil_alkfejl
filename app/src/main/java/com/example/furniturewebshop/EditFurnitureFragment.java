@@ -183,6 +183,9 @@ public class EditFurnitureFragment extends Fragment {
                 .set(furnitureItem)
                 .addOnSuccessListener(aVoid -> {
                     Toast.makeText(getContext(), "Sikeres módosítás!", Toast.LENGTH_SHORT).show();
+                    Bundle result = new Bundle();
+                    result.putBoolean("refresh", true);
+                    getParentFragmentManager().setFragmentResult("refreshRequest", result);
                     requireActivity().getSupportFragmentManager().popBackStack();
                 })
                 .addOnFailureListener(e -> Toast.makeText(getContext(), "Hiba mentés közben: " + e.getMessage(), Toast.LENGTH_SHORT).show());
