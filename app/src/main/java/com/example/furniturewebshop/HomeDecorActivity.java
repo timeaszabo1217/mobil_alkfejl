@@ -8,7 +8,7 @@ public class HomeDecorActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new MainFragment())
+                    .replace(R.id.content_frame, new HomeDecorFragment())
                     .commit();
         }
     }
