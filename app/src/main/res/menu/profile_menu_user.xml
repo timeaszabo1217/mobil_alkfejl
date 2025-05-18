@@ -6,4 +6,7 @@
     <item
         android:id="@+id/menu_logout"
         android:title="@string/kijelentkezés" />
+    <item
+        android:id="@+id/menu_admin"
+        android:title="@string/admin" />
 </menu>

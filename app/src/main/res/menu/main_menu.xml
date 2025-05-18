@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_furniture"
-        android:title="Bútor" />
+        android:title="Beltér" />
     <item
         android:id="@+id/menu_home_decor"
-        android:title="Lakberendezés" />
+        android:title="Dekoráció" />
     <item
         android:id="@+id/menu_garden"
         android:title="Kert" />

@@ -18,4 +18,5 @@
     <string name="bejelentkezes_gomb">Bejelentkezés gomb</string>
     <string name="login_text">Még nincs fiókod? Regisztrálj itt!</string>
     <string name="regisztracios_link">Regisztrációs link</string>
+    <string name="admin">Admin</string>
 </resources>
